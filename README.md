@@ -5,7 +5,7 @@
 ### EEG-to-Text Translation Using the Thought2Text Framework
 ### Team Number
 ### 1. CHEN, Jiayu; Neptun Code: PUOOOZ
-### 2. Wong, Hongen; Neptun Code:
+### 2. Wang, Hongen; Neptun Code:FT7J14
 
 ## Project Description:
 ### This project explores how brain signals (EEG) can be translated into natural text using state-of-the-art large language models. The baseline is the Thought2Text framework, which combines EEG encoders, multimodal alignment, and LLM fine-tuning. In this project, we’ll experiment with the DeepSeek-7B model instead of the original Mistral-7B to see how model choice impacts accuracy and descriptiveness.
