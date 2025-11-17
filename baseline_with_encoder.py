@@ -1,7 +1,4 @@
-"""
-FINAL BASELINE THAT WORKS WITH ChannelNet + model.safetensors
-==============================================================
-"""
+
 from sklearn.metrics import confusion_matrix, classification_report, ConfusionMatrixDisplay
 import matplotlib.pyplot as plt
 import numpy as np
@@ -24,9 +21,9 @@ from channelnet.config import EEGModelConfig
 from channelnet.model import ChannelNetModel
 
 
-# ============================================================
+
 # PTM Dataset
-# ============================================================
+
 
 class PTM_EEG_Dataset(Dataset):
     def __init__(self, eeg_path, time_low=0, time_high=450):
@@ -55,9 +52,9 @@ class PTM_EEG_Dataset(Dataset):
         return eeg, label
 
 
-# ============================================================
+
 # Splits
-# ============================================================
+
 
 class PTM_Split(Dataset):
     def __init__(self, base_ds, split_path, split_num, split_name):
@@ -81,9 +78,9 @@ class PTM_Split(Dataset):
         return self.base[self.indices[i]]
 
 
-# ============================================================
+
 # Load Encoder
-# ============================================================
+
 
 def load_channelnet_encoder(folder):
     print(f"Loading ChannelNet encoder from {folder}")
@@ -102,9 +99,9 @@ def load_channelnet_encoder(folder):
     return encoder
 
 
-# ============================================================
+
 # Embedding
-# ============================================================
+
 
 def extract_embedding(encoder, eeg):
     with torch.no_grad():
@@ -121,9 +118,9 @@ def build_embeddings(dataset, encoder):
     return np.stack(X), np.array(y)
 
 
-# ============================================================
+
 # MLP Baseline
-# ============================================================
+
 
 class MLP(nn.Module):
     def __init__(self, in_dim, nclass):
@@ -142,9 +139,9 @@ class MLP(nn.Module):
         return self.net(x)
 
 
-# ============================================================
+
 # MAIN
-# ============================================================
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -211,9 +208,9 @@ def main():
 
         print(f"Epoch {ep} | Val Acc: {acc:.4f}")
 
-    # =====================================================
+  
     # FINAL EVALUATION
-    # =====================================================
+  
     print("\n===== MLP Evaluation =====")
     model.eval()
     with torch.no_grad():
