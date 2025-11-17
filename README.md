@@ -44,3 +44,22 @@
 #### https://drive.google.com/drive/folders/1XqV6MMl28iYXkQBMEFHfEXllGmCbqpOu
 #### 3. Run python notebook
 
+## Training and Evaluation
+###first train egg
+```python
+!python train_eeg_classifier.py \
+    --eeg_dataset /content/drive/MyDrive/data/capstone/block/eeg_55_95_std.pth \
+    --splits_path /content/drive/MyDrive/data/capstone/block/block_splits_by_image_all.pth \
+    --output ./eeg_encoder_55-95_40_classes \
+    --image_dir /content/drive/MyDrive/data/capstone/images/
+```
+###Second train baseline model and evaluation
+```python
+!python baseline_with_encoder.py \
+    --eeg_dataset /content/drive/MyDrive/data/capstone/block/eeg_55_95_std.pth \
+    --splits_path /content/drive/MyDrive/data/capstone/block/block_splits_by_image_all.pth \
+    --encoder_path /content/drive/MyDrive/data/eeg_encoder_55-95_40_classes \
+    --epochs 20
+```
+###The evaluation are include in training file
+
