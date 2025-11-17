@@ -53,6 +53,9 @@
     --output ./eeg_encoder_55-95_40_classes \
     --image_dir /content/drive/MyDrive/data/capstone/images/
 ```
+###Report Can be Found in
+https://wandb.ai/1072356040-budapesti-m-szaki-s-gazdas-gtudom-nyi-egyetem/huggingface/reports/Copy-of-1072356040-s-EEG-Encoder-Train-Report--VmlldzoxNTA4MTQxNw
+
 ###Second train baseline model and evaluation
 ```python
 !python baseline_with_encoder.py \
