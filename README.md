@@ -46,13 +46,13 @@ https://drive.google.com/drive/folders/1XqV6MMl28iYXkQBMEFHfEXllGmCbqpOu
 git clone https://github.com/Vtccc/DL_Proj_EEG-to-Text.git
 ```
 
-Install Dependencies
+3.Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3.Train EEG Encoder
+4.Train EEG Encoder
 
 Run the following command to align the EEG encoder with CLIP embeddings: 
 
@@ -66,7 +66,7 @@ python train_eeg_classifier.py \
 Report Can be Found in
 https://wandb.ai/1072356040-budapesti-m-szaki-s-gazdas-gtudom-nyi-egyetem/huggingface/reports/Copy-of-1072356040-s-EEG-Encoder-Train-Report--VmlldzoxNTA4MTQxNw
 
-4.Fine-Tune LLM
+5.Fine-Tune LLM
 ```python
 python finetune_llm.py \
     --eeg_dataset data/block/eeg_55_95_std.pth \
@@ -79,7 +79,7 @@ python finetune_llm.py \
     --bf16
 ```
 
-5.Run Inference
+6.Run Inference
 Use the trained model to generate text from EEG signals:
 
 Prompt type could choose from "basic" "detailed" "creative" to get different inference results
@@ -96,7 +96,7 @@ python inference.py \
   --results_dir ./results
 ```
 
-6.Evaluation
+7.Evaluation
 To run the evaluation, execute the `eval` notebook.
 
 All the trained model and dataset can be found in link below:
