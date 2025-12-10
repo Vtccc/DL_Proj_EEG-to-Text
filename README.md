@@ -34,10 +34,7 @@ pretrain_data_processor.py: Processes raw data from BDD and Mind BIG Data source
 
 requirements.txt: Lists the Python libraries and their versions required for the project, facilitating environment setup.
 
-commands.txt / run_inference_only_eeg.sh: Provide example commands or shell scripts for running training and inference scripts, simplifying task execution for users.
-
-
-## How to run
+## How to Reproduce
 
 Download Preprocessed Data
 Download the preprocessed EEG dataset from the link below and place it in the project directory:
