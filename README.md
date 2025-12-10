@@ -13,7 +13,7 @@ https://huggingface.co/datasets/Jasmine1122/data-and-classes/tree/main
 
 
 ## Description of the Files
-datautils.py: Implements dataset classes (e.g., EEGDataset, EEGFineTuningDataset, EEGInferenceDataset) and data splitting/filtering classes (Splitter, SplitterFineTuning, Filter). These handle loading and processing EEG signals, image data, and text annotations to support model training and inference.
+datautils.py: Implements dataset classes and data splitting/filtering classes. These handle loading and processing EEG signals, image data, and text annotations to support model training and inference.
 
 model.py: Defines the EEGModelForCausalLM class, which integrates an EEG encoder (eeg_encoder), a language model (llm), and a projection layer (mm_proj). It supports model loading, saving, and text generation, serving as the core structure for EEG-to-text conversion.
 
