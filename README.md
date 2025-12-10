@@ -99,7 +99,7 @@ python inference.py \
 7.Evaluation
 To run the evaluation, execute the `eval` notebook.
 
-All the trained model and dataset can be found in link below:
+All the trained model and datasets can be found in link below if you want to reproduce our work rapidly:
 https://huggingface.co/datasets/Jasmine1122/data-and-classes/tree/main
 
 ## Acknowledgments
