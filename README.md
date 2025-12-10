@@ -8,7 +8,8 @@
 #### 2. Wang, Hongen; Neptun Code: FT7J14
 
 ## Project Description:
-#### This project explores how brain signals (EEG) can be translated into natural text using state-of-the-art large language models. The baseline is the Thought2Text framework, which combines EEG encoders, multimodal alignment, and LLM fine-tuning. In this project, we’ll experiment with the DeepSeek-7B model instead of the original Mistral-7B to see how model choice impacts accuracy and descriptiveness.
+#### This project explores how brain signals (EEG) can be translated into natural text using state-of-the-art large language models. The baseline is the Thought2Text framework, which combines EEG encoders, multimodal alignment, and LLM fine-tuning. In this project, we’ll experiment with the DeepSeek-7B model instead of the original Mistral-7B to see how model choice impacts accuracy and descriptiveness.As a small project for Deeplearning course, we attached the following link as reference for the trained model. Downloading these trained models can helping you reproduce our work precisly as any change in the configuration may change the results significantly. Moreover, LLM implementations running on GPUs exhibit inherent non-determinism, leading to slight deviations in results across separate runs.
+https://huggingface.co/datasets/Jasmine1122/data-and-classes/tree/main
 
 
 ## Description of the Files
@@ -52,7 +53,7 @@ git clone https://github.com/Vtccc/DL_Proj_EEG-to-Text.git
 pip install -r requirements.txt
 ```
 
-4.Train EEG Encoder
+4.EEG Encoder alignmment with CLIP embeddings
 
 Run the following command to align the EEG encoder with CLIP embeddings: 
 
@@ -63,6 +64,9 @@ python train_eeg_classifier.py \
     --output ./eeg_encoder_55-95_40_classes \
     --image_dir /content/drive/MyDrive/data/capstone/images/
 ```
+
+The checkpoints for the encoder will be stored in './eeg_encoder_55-95_40_classes'.
+
 Report Can be Found in
 https://wandb.ai/1072356040-budapesti-m-szaki-s-gazdas-gtudom-nyi-egyetem/huggingface/reports/Copy-of-1072356040-s-EEG-Encoder-Train-Report--VmlldzoxNTA4MTQxNw
 
@@ -78,6 +82,7 @@ python finetune_llm.py \
     --load_in_8bit \
     --bf16
 ```
+Upon completion, the traine model will be available under 'deepseek_eeg_model_7B_base' directory.
 
 6.Run Inference
 Use the trained model to generate text from EEG signals:
@@ -97,10 +102,8 @@ python inference.py \
 ```
 
 7.Evaluation
+We evaluate the model's generations through popular NLG metrics such as BLEU, METEOR and ROUGE.
 To run the evaluation, execute the `eval` notebook.
-
-All the trained model and datasets can be found in link below if you want to reproduce our work rapidly:
-https://huggingface.co/datasets/Jasmine1122/data-and-classes/tree/main
 
 ## Acknowledgments
 This repository builds upon and extends the excellent work by Abhijit Mishra and collaborators in the Thought2Text project. 
