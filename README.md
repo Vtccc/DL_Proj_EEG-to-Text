@@ -36,11 +36,11 @@ requirements.txt: Lists the Python libraries and their versions required for the
 
 ## How to Reproduce
 
-Download Preprocessed Data
+1.Download Preprocessed Data
 Download the preprocessed EEG dataset from the link below and place it in the project directory:
 https://drive.google.com/drive/folders/1XqV6MMl28iYXkQBMEFHfEXllGmCbqpOu
 
-Clone the Repository
+2.Clone the Repository
 
 ```bash
 git clone https://github.com/Vtccc/DL_Proj_EEG-to-Text.git
@@ -52,7 +52,7 @@ Install Dependencies
 pip install -r requirements.txt
 ```
 
-Train EEG Encoder
+3.Train EEG Encoder
 
 Run the following command to align the EEG encoder with CLIP embeddings: 
 
@@ -66,7 +66,7 @@ python train_eeg_classifier.py \
 Report Can be Found in
 https://wandb.ai/1072356040-budapesti-m-szaki-s-gazdas-gtudom-nyi-egyetem/huggingface/reports/Copy-of-1072356040-s-EEG-Encoder-Train-Report--VmlldzoxNTA4MTQxNw
 
-Fine-Tune LLM
+4.Fine-Tune LLM
 ```python
 python finetune_llm.py \
     --eeg_dataset data/block/eeg_55_95_std.pth \
@@ -79,7 +79,7 @@ python finetune_llm.py \
     --bf16
 ```
 
-Run Inference
+5.Run Inference
 Use the trained model to generate text from EEG signals:
 
 Prompt type could choose from "basic" "detailed" "creative" to get different inference results
@@ -96,8 +96,11 @@ python inference.py \
   --results_dir ./results
 ```
 
-Evaluation
+6.Evaluation
 To run the evaluation, execute the `eval` notebook.
+
+All the trained model and dataset can be found in link below:
+https://huggingface.co/datasets/Jasmine1122/data-and-classes/tree/main
 
 ## Acknowledgments
 This repository builds upon and extends the excellent work by Abhijit Mishra and collaborators in the Thought2Text project. 
