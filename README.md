@@ -8,7 +8,7 @@
 #### 2. Wang, Hongen; Neptun Code: FT7J14
 
 ## Project Description:
-#### This project explores how brain signals (EEG) can be translated into natural text using state-of-the-art large language models. The baseline is the Thought2Text framework, which combines EEG encoders, multimodal alignment, and LLM fine-tuning. In this project, we’ll experiment with the DeepSeek-7B model instead of the original Mistral-7B to see how model choice impacts accuracy and descriptiveness.As a small project for Deeplearning course, we attached the following link as reference for the trained model. Downloading these trained models can helping you reproduce our work precisly as any change in the configuration may change the results significantly. Moreover, LLM implementations running on GPUs exhibit inherent non-determinism, leading to slight deviations in results across separate runs.
+#### This project explores how brain signals (EEG) can be translated into natural text using state-of-the-art large language models. The baseline is the Thought2Text framework, which combines EEG encoders, multimodal alignment, and LLM fine-tuning. In this project, we’ll experiment with the DeepSeek-7B model instead of the original Mistral-7B to see how model choice impacts accuracy and descriptiveness.As a small project for Deeplearning course, we attached the following link as reference for the trained model. Downloading these trained models can helping you reproduce our work precisly as any change in the configuration may change the results significantly and LLM implementations running on GPUs exhibit inherent non-determinism, leading to slight deviations in results across separate runs.
 https://huggingface.co/datasets/Jasmine1122/data-and-classes/tree/main
 
 
