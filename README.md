@@ -3,7 +3,7 @@
 ## Team Information
 ### Team Name
 #### EEG-to-Text Translation Using the Thought2Text Framework
-#### Team Number
+### Team Number
 #### 1. CHEN, Jiayu; Neptun Code: PUOOOZ
 #### 2. Wang, Hongen; Neptun Code: FT7J14
 
